@@ -14,7 +14,7 @@
         <module name="playerservice" />
         <module name="matchservice" />
       </profile>
-      <profile name="Annotation profile for authservice" enabled="true">
+      <profile name="Annotation profile for apigateway" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
