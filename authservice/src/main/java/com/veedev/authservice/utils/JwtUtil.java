@@ -12,10 +12,11 @@ import java.util.Date;
 @Component
 public class JwtUtil {
     @Value("${jwt.secret.key}")
-    private final String SECRET_KEY = "SecretKey";
+    private String SECRET_KEY = "";
     private final long EXPIRATION_TIME = 86400000;
 
     public String generateToken(User user) {
+        System.out.println(SECRET_KEY);
         return Jwts.builder()
                 .setSubject(user.getUsername())
                 .setIssuedAt(new Date())
