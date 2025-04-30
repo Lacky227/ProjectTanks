@@ -6,10 +6,13 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class GatewayConfig {
+    
     @Bean
-    RouteLocator routes(RouteLocatorBuilder builder) {
+    public RouteLocator routes(RouteLocatorBuilder builder) {
         return builder.routes()
-                .route("auth_service", r -> r.path("/auth/**").uri("http://localhost.8881"))
-                .build();
+            .route("example_service", r -> r
+                .path("/auth/**")
+                .uri("http://localhost:8081"))
+            .build();
     }
 }
